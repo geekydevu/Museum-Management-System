@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	 <link rel="stylesheet" href="{% static "css/style.css" %}" /> <!-- CSS -->
+</head>
+<body background="{% static "images/background.jpg" %}">
+
+<center><h1>Artists and their Works</h1><br>
+{% for table, artist in zipped %}
+
+	<h2>{{artist}}</h2>
+
+	<table>
+		<tr>
+			{% for i in columns %}
+				<th>{{i}}</th>
+			{% endfor %}
+		</tr>
+
+		{% for i in table %}
+			<tr>
+				{% for j in i %}
+					<td>{{j}}</td>
+
+				{% endfor %}
+			</tr>
+		{% endfor %}
+	</table>
+
+{% endfor %}</center>
+
+</body>
+</html>

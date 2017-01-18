@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Ticket</title>
+	 <link rel="stylesheet" href="{% static "css/style.css" %}" /> <!-- CSS -->
+</head>
+<body background="{% static "images/background.jpg" %}">
+	<center><h1> Hello , you are in Ticket Booking !!! </h1></center>
+  <br><br><br>
+
+	<center>
+   <div>
+   <form  action="/ticket_book/" method="POST">{% csrf_token %}
+
+      <label class="label">Visit Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type='text' name='date' required value={{date}}>
+      <br>(YYYY-MM-DD)<br>
+      <label class="label">Number of Tickets</label>
+      <input type='number' name='number' required value={{not}}>
+      <br>
+      <label class="label">Type(N/S)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type='text' name='type' required value={{type}}>
+      <br><br>
+
+      <input name='submit' type='submit' value='Book Ticket'><br>
+      
+    </form> 
+  </div> 
+  </center>
+
+    <br><br>{{error}}
+	
+</body>
+</html>
+
+
+

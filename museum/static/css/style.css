@@ -1,0 +1,241 @@
+body {
+  background-color:cyan
+}
+ul {
+    font-size: 32px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    background-color: green;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+    color: hotpink;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: red;
+}
+
+#boxForm
+{
+  background-color:rgb(255, 203, 96);
+  width:340px;
+  position:relative;
+  left:50vw;
+  margin-left:-170px;
+  box-shadow:1px 1px 8px rgba(244, 102, 27,1);
+}
+
+#boxForm #title
+{
+  font-family: cursive;
+  font-weight:bold;
+  text-align:center;
+  padding-top:30px;
+}
+
+#boxForm form
+{
+  margin-top:20px;
+  text-align:center;
+}
+
+h1 {
+  font-size: 50px;
+  color: red;
+}
+
+h2 {
+  font-size: 37.5px;
+  color: orange;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.text
+{
+  padding:10px;
+  width:250px;
+  margin-top:10px;
+  border-style:none;
+  border-bottom-style:solid;
+  border-color:green
+  font-family: sans-serif;
+  font-size:17.5px;
+  color:rgb(244, 102, 27);
+  background-color:rgb(255, 203, 96);
+}
+
+.text input[type=text]
+{
+  padding:10px;
+  width:250px;
+  margin-top:10px;
+  border-style:none;
+  border-bottom-style:solid;
+  border-color:green
+  font-family: sans-serif;
+  font-size:17.5px;
+  color:rgb(244, 102, 27);
+  background-color:rgb(255, 203, 96);
+}
+
+.text:focus
+{
+  outline: none; 
+}
+
+::-webkit-input-placeholder { color:rgb(244, 102, 27);font-weight:bold;font-size:17.5px; }
+
+#rememberMe
+{
+  float:left;
+  margin-left:40px;
+  font-size:15px;
+}
+
+form label
+{
+  float:left;
+  margin-left:5px;
+  color:rgb(244, 102, 27);
+  font-family: sans-serif;
+  font-size:15px;
+}
+
+
+.button
+{
+  padding:10px;
+  width:150px;
+ background: -webkit-linear-gradient(top, rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%); 
+
+  font-family: sans-serif;
+  
+  font-size:15px;
+  border-style:none;
+  box-shadow:1px 1px rgba(244, 102, 27,1);
+  cursor:pointer;
+  
+  color:white;
+  font-weight:bold;
+  margin:20px;
+  margin-left:-28px;
+}
+
+table {
+    background-color: gray;
+    border-collapse: collapse;
+}
+
+tr:hover {background-color: yellow}
+
+th , td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table, th, tr {
+    align:center;
+    border: 1px solid gray;
+    
+}
+
+input[type=text], select {
+    width: 30%
+    padding: 12px 20px;
+    margin: 8px 0;
+    align:center;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+input[type=number] {
+    width: 30%
+    padding: 12px 20px;
+    margin: 8px 0;
+    align:center;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+input[type=email] {
+    width: 30%
+    padding: 12px 20px;
+    margin: 8px 0;
+    align:center;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+input[type=submit] {
+    width: 70%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 30px
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    width: 70%;
+    border-radius: 5px;
+    background-color: yellow;
+    padding: 20px;
+}
+
+.label {
+  font-size: 18px;
+  margin-top: 18px;
+}
+
+form {
+  align: center
+}
+

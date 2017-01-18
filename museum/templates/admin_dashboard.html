@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}"/>
+
+	
+      <ul>
+      <li><a href = '/emp_reg/'> New Employee</a></li>
+      <li><a href = '/artist_reg/'> New Artist</a></li>
+      <li><a href = '/artifact_reg/'> New Artifact</a></li>
+      <li><a href = '/department_reg/'> New Department</a></li>
+      <li style="float:right"><a class="active" href="/user_logout/"> Logout</a></li>
+      </ul>
+    
+    <br><br><br><br><br><br><br>
+
+	<center><center><h1> Hello {{Name}} </h1></center>
+	<br><br><br>
+
+
+<h2>EMPLOYEE DATA</h2>
+	<table>
+
+<tr>
+	{% for i in emp_columns %}
+		<th>{{i}}</th>
+	{% endfor %}
+</tr>
+
+{% for i in emp_data %}
+	<tr>
+	{% for j in i %}
+		<td>{{j}}</td>
+
+	
+	{% endfor %}
+	</tr>
+{% endfor %}
+
+</table>
+
+<br><br><br><br><br>
+<h2>ARTIFACTS DATA</h2>
+<table>
+
+
+<tr>
+	{% for i in artifact_columns %}
+		<th>{{i}}</th>
+	{% endfor %}
+</tr>
+
+{% for i in artifact_data %}
+	<tr>
+	{% for j in i %}
+		<td>{{j}}</td>
+
+	
+	{% endfor %}
+	</tr>
+{% endfor %}
+
+</table>
+
+<br><br><br><br><br>
+<h2>ARTISTS DATA</h2>
+<table>
+
+
+<tr>
+	{% for i in artist_columns %}
+		<th>{{i}}</th>
+	{% endfor %}
+</tr>
+
+{% for i in artist_data %}
+	<tr>
+	{% for j in i %}
+		<td>{{j}}</td>
+
+	
+	{% endfor %}
+	</tr>
+{% endfor %}
+
+</table>
+<br><br><br><br><br>
+<h2>DEPARTMENT DATA</h2>
+<table>
+
+
+<tr>
+	{% for i in dept_columns %}
+		<th>{{i}}</th>
+	{% endfor %}
+</tr>
+
+{% for i in dept_data %}
+	<tr>
+	{% for j in i %}
+		<td>{{j}}</td>
+
+	
+	{% endfor %}
+	</tr>
+{% endfor %}
+
+</table>
+<br><br><br><br><br>
+</center>
+
+</body>
+</html>
+
+
+

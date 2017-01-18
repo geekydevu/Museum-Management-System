@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Feedback</title>
+	 <link rel="stylesheet" href="{% static "css/style.css" %}" /> <!-- CSS -->
+</head>
+<body background="{% static "images/background.jpg" %}">
+	<center><h1> Hello , you are in Feedback !!! </h1></center>
+	<br><br><br>
+
+	<center>
+		<div>
+		<form  action="/feedback/" method="POST">{% csrf_token %}
+
+      <label class="label">Date of visit&nbsp;&nbsp;&nbsp;</label>
+      <input type='text' name='date' required value={{date}}>
+      <br>(YYYY-MM-DD)
+      <br>
+      <label class="label">Type of ticket</label>
+      <input type='text' name='type' required value={{type}}>
+      <br>
+      <label class="label">Feedback&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type='text' name='feedback' required value={{feedback}}>
+      <br><br>
+
+  	  <input name='submit' type='submit' value='Add Feedback'><br>
+  	  
+    </form>
+	</div>
+	</center>
+
+    <br><br>{{error}}
+	
+</body>
+</html>
+
+
+

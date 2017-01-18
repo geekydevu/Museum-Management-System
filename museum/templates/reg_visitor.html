@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visitor Registration</title>
+	 <link rel="stylesheet" href="{% static "css/style.css" %}" /> <!-- CSS -->
+</head>
+<body background="{% static "images/background.jpg" %}">
+	
+<center><h1> Hello , you are in Visitor registration !!! </h1></center>
+  <br><br><br>
+
+	<center>
+   <div>
+    <form  action="/visitor_reg/" method="POST">{% csrf_token %}
+
+      <label class="label">First Name</label>
+      <input type='text' required name='fname' value={{fname}}>
+      <br>
+      <label class="label">Last Name</label>
+      <input type='text' required name='lname' value={{lname}}>
+      <br>
+      <label class="label">Nationality</label>
+      <input type='text' required name='nationality' value={{nationality}}>
+      <br>
+      <label class="label">Address&nbsp;&nbsp;&nbsp;</label>
+      <input type='text' required name='address' value={{address}}>
+      <br>
+      <label class="label">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type='email' required name='email' value={{email}}>
+      <br>
+      <label class="label">Contact&nbsp;&nbsp;&nbsp;</label>
+      <input type='number' required name='phone' value={{phone}}>
+      <br><br>
+
+      <input name='submit' type='submit' value='Add Visitor'><br>
+      
+      <br><br>{{error}}
+
+    </form>
+  </div> 
+  </center>
+	
+</body>
+</html>
+
+
+

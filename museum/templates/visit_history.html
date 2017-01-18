@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	 <link rel="stylesheet" href="{% static "css/base.css" %}" /> <!-- CSS -->
+</head>
+<body>
+
+<table>
+
+
+<tr>
+	{% for i in columns %}
+		<th>{{i}}</th>
+	{% endfor %}
+</tr>
+
+{% for i in table %}
+	<tr>
+	{% for j in i %}
+		<th>{{j}}</th>
+
+	
+	{% endfor %}
+	</tr>
+{% endfor %}
+
+</table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visit Registration</title>
+	 <link rel="stylesheet" href="{% static "css/base.css" %}" /> <!-- CSS -->
+</head>
+<body>
+	<h1> Hello {{Name}}, you are in Visit registrattion !!! </h1><br><br><br>
+
+	<form  action="/visit_reg/" method="POST">{% csrf_token %}
+
+      Visitor Name : <input type='text' name='name' placeholder='Username' required>
+      <br>
+      Feedback : <input type='text' name='feedback' required>
+      <br><br>
+
+  	  <input name='submit' type='submit' value='Add Visit'><br>
+  	  
+    </form>
+	
+</body>
+</html>
+
+
+

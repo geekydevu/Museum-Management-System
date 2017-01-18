@@ -1,0 +1,17 @@
+This Project is a Database Management Application Project(frontend and backend) for Museum Management System. The website has been created using Django web framework in Python.
+In the system, the manager of the museum has the add and update privilages for Artifacts , Artists information as well as the data of Employees and Departments. The manager can login through the portal and do the neccesary updates/additions.   
+Visitors can create their account on the website and can book tickets for the museum in advance. After signup, the user can login with the same credentials and can also see various artifacts of the museum as well information about various departments and artists involved in the Museum.
+
+Bare minimum essentials to run the app :- 
+
+1.) Django version 1.10.1
+2.) Python version 2.7
+3.) Python Mysqldb connector
+
+How to run the app :-
+
+1) cd into the museum/ folder
+2) Start the localhost server by entering the following command :
+	python manage.py runserver
+3) Open the following link in the Web-browser
+	127.0.0.1:8000/loginform/ 

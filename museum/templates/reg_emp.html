@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Registration</title>
+	 <link rel="stylesheet" href="{% static "css/style.css" %}" /> <!-- CSS -->
+</head>
+<body background="{% static "images/background.jpg" %}"><center>
+	<h1> Hello {{Name}}, you are in Employee registrattion</h1></center>
+   <br><br><br>
+
+	<center>
+   <div>
+   <form  action="/emp_reg/" method="POST">{% csrf_token %}
+
+      <label class="label">First Name&nbsp;&nbsp;&nbsp;</label>
+      <input type='text' required name='fname' value={{fname}}>
+      <br>
+      <label class="label">Last Name&nbsp;&nbsp;&nbsp;</label>
+      <input type='text' required name='lname' value={{lname}}>
+      <br>
+      <label class="label">Department&nbsp;</label>
+      <input type='text' required name='department' value={{department}}>
+      <br>
+      <label class="label">Date of Birth</label>
+      <input type='text' required name='dateofbirth' value={{dateofbirth}}>
+      <br>
+      <label class="label">Sex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type='text' name='sex' required value={{sex}}>
+      <br>
+      <label class="label">Designation</label>
+      <input type='text' required name='designation' value={{designation}}>
+      <br>
+      <label class="label">address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type='text' required name='address' value={{address}}>
+      <br>
+      <label class="label">Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type='number' required name='phone1' value={{phone1}}>
+      <br>
+      <label class="label">Contact2&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type='number' name='phone2' value={{phone2}}>
+      <br>(Optional)<br><br><br>
+      
+      <input name='submit' type='submit' value='Add Employee'><br>
+
+      <br><br>{{error}}
+      
+    </form> 
+  </div> 
+  </center>
+	
+</body>
+</html>
+
+
+

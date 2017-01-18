@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Artist Registration</title>
+	 <link rel="stylesheet" href="{% static "css/style.css" %}" /> <!-- CSS -->
+</head>
+<body background="{% static "images/background.jpg" %}">
+	<center><h1> Hello {{Name}}, you are in Artist registrattion !!! </h1></center>
+  <br><br><br>
+
+	<center>
+   <div>
+   <form  action="/artist_reg/" method="POST">{% csrf_token %}
+
+      <label class="label">First Name&nbsp;</label>
+      <input type='text' required name='fname' value={{fname}}>
+      <br>
+      <label class="label">Last Name&nbsp;</label>
+      <input type='text' required name='lname' value={{lname}}>
+      <br>
+      <label class="label">Nationality&nbsp;</label>
+      <input type='text' name='nationality' value={{nationality}}>
+      <br>
+      <label class="label">Begin Date</label>
+      <input type='text' required name='begindate' value={{begindate}}>
+      <br>(YYYY-MM-DD)<br>
+      <label class="label">End Date&nbsp;&nbsp;</label>
+      <input type='text' name='enddate' value={{enddate}}>
+      <br>(YYYY-MM-DD)<br>
+      <label class="label">Contact&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type='number' required name='phone' value={{phone}}>
+      <br><br>
+
+      <input name='submit' type='submit' value='Add Artist'><br>
+      
+    </form> 
+  </div> 
+  </center>
+    <br><br>{{error}}
+	
+</body>
+</html>
+
+
+

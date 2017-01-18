@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html >
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Museum Management Login form</title>
+         
+  </head>
+
+  <body background="{% static "images/bg4.jpg" %}">
+
+    
+      <ul>
+      <li><a href = '/artifact/'> View Artifacts</a></li>
+      <li><a href = '/artist_artifact/'> Explore Artist Works</a></li>
+      <li><a href = '/department_artifact/'> Explore Departments</a></li>
+      <li style="float:right"><a class="active" href="/visitor_reg/"> Register</a></li>
+      </ul>
+    
+    <br><br><br><br><br><br><br><br><br>
+
+
+    <div id="boxForm">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}"/>
+    <h3 id="title">Museum Management Login Portal</h3>
+    <form  action="/loginform/" method="POST">{% csrf_token %}
+      <input class='text' type='text' name='fullname' placeholder='Username' required>
+      <br>
+      <input class='text' type='password' name='password' placeholder='Password' required>
+      <br><br>
+
+      <input type="radio" name="options" id="Admin" value="Admin" checked="True"> Admin </input>
+      <input type="radio" name="options" id="Visitor" value="Visitor"> Visitor </input><br>
+  	  <input class='button' type='submit' value='Let me in'><br>
+  	  <input id='rememberMe' name='rememberMe' type='checkbox'> <label>Remember me</label>
+      
+      <br>
+     </form>
+     </div>
+     <br>
+
+
+     
+    
+  </body>
+
+</html>
