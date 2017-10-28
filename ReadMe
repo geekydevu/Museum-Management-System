@@ -6,7 +6,7 @@ Bare minimum essentials to run the app :-
 
 1.) Django version 1.10.1
 2.) Python version 2.7
-3.) Python Mysqldb connecter
+3.) Python Mysqldb connector
 
 How to run the app :-
 
